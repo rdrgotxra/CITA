@@ -1,5 +1,5 @@
-from sqlalchemy import create_engine, MetaData, Table, select, or_
-from geoalchemy2 import Geometry, func
+from sqlalchemy import create_engine, MetaData, Table, select, func
+from geoalchemy2 import Geometry
 from geoalchemy2.shape import to_shape
 from shapely import to_geojson
 import json

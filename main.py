@@ -7,9 +7,9 @@ app = FastAPI()
 
 
 @app.get("/api/{mun}")
-def user_api(mun: str, q: Annotated[list[str], Query()]):
+def user_api(mun: str, q: Annotated[list[str], Query()] = None):
     if q is None:
-        return "q = endereço, dsqfl ou sequencial"
+        return "insira endereço, dsqfl ou sequencial"
 
     lotes = get_lotes(mun, q)
 
