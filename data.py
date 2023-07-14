@@ -6,8 +6,11 @@ import json
 from utils import get_coords, check_q
 from params import get_params
 
+# DB_URL = "postgresql+psycopg2://admin:senha2023@127.0.0.1/appvia"
+DB_URL = "postgresql+psycopg2://postgres:senha2023@34.95.208.183/postgres"
 
-engine = create_engine("postgresql+psycopg2://admin:senha2023@127.0.0.1/appvia")
+engine = create_engine(DB_URL)
+
 metadata = MetaData()
 
 
